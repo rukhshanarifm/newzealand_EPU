@@ -22,7 +22,9 @@ git clone https://github.com/diodz/new-zealand-epu.git
 ## Getting data on your machine: 
 Our scrapped dataset consists of three files .pkl (one per newspaper) with a combined total of 169,535 newspaper articles, which add up to 528.3 MB. To download, run the following script from the shell, which will also create the required folders: 
 
-$sh get_files.sh 
+```
+$ sh get_files.sh 
+```
 
 ## Running the tests:
 Testing crawlers, data cleaning and creating Index (together):
@@ -41,9 +43,11 @@ The crawlers took 2 weeks to run in order to scrape all required data (169,500 n
 	
 Set the working directory to scripts and run the following for each news source in the terminal:
 
+```
 python3 herald_crawler.py
 python3 stuff_crawler.py
 python3 tvnz_crawler.py
+```
 
 The created datasets are not cleaned as they are generated. These are in the .pkl format. A .csv file has been included for stuff.co.nz for the user to look at. 
 
@@ -52,9 +56,11 @@ Data cleaning scripts for each newspaper have been provided. These can be run us
 
 Set the working directory to scripts and run the following for each news source in the terminal:
 
+```
 python3 herald_cleaner.py
 python3 stuff_clean.py
 python3 tvnz_clean.py
+```
 
 Run the scripts to perform cleaning of the sample database. The clean sample datasets are saved to /data/clean in .pkl format
 
